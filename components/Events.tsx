@@ -38,7 +38,7 @@ const Events: React.FC = () => {
   return (
     <section id={SectionId.EVENTS} className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="mb-12">
           <div className="backdrop-blur-sm bg-black/30 p-6 rounded-2xl border border-white/5 inline-block">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Upcoming Events</h2>
@@ -51,12 +51,12 @@ const Events: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.id} className="group bg-[#1a1a2e]/60 backdrop-blur-md rounded-2xl overflow-hidden border border-white/5 hover:border-[#00ff88]/50 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#00ff88]/10">
-              
+
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-[#0a0a0a]/20 group-hover:bg-transparent transition-colors z-10"></div>
-                <img 
-                  src={event.image} 
-                  alt={event.title} 
+                <img
+                  src={event.image}
+                  alt={event.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 z-20 flex gap-2">
@@ -77,15 +77,15 @@ const Events: React.FC = () => {
                     <MapPin className="w-4 h-4" /> {event.location}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#00d4ff] transition-colors">
                   {event.title}
                 </h3>
-                
+
                 <p className="text-slate-400 mb-6 line-clamp-3">
                   {event.description}
                 </p>
-                
+
                 <button className="w-full py-3 rounded-xl border border-white/10 text-white font-semibold hover:border-[#00ff88] hover:text-[#00ff88] hover:bg-[#00ff88]/5 transition-all">
                   Get Tickets
                 </button>

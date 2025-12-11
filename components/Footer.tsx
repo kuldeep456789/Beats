@@ -9,18 +9,18 @@ const Footer: React.FC = () => {
           Urban<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff88] to-[#00d4ff]">Beat</span>
         </span>
       </div>
-      
+
       <div className="flex justify-center space-x-6 mb-8 text-slate-400">
-        <a href="#" className="hover:text-[#00ff88] transition-colors"><Instagram className="w-6 h-6"/></a>
-        <a href="#" className="hover:text-[#00ff88] transition-colors"><Twitter className="w-6 h-6"/></a>
-        <a href="#" className="hover:text-[#00ff88] transition-colors"><Facebook className="w-6 h-6"/></a>
-        <a href="#" className="hover:text-[#00ff88] transition-colors"><Youtube className="w-6 h-6"/></a>
+        <a href="#" className="hover:text-[#00ff88] transition-colors"><Instagram className="w-6 h-6" /></a>
+        <a href="#" className="hover:text-[#00ff88] transition-colors"><Twitter className="w-6 h-6" /></a>
+        <a href="#" className="hover:text-[#00ff88] transition-colors"><Facebook className="w-6 h-6" /></a>
+        <a href="#" className="hover:text-[#00ff88] transition-colors"><Youtube className="w-6 h-6" /></a>
       </div>
-      
-      <p className="text-slate-500 text-sm">
+
+      {/* <p className="text-slate-500 text-sm">
         © {new Date().getFullYear()} UrbanBeat Collective. All rights reserved. <br/>
         <span className="text-xs opacity-50">Built with React + Tailwind + Gemini AI.</span>
-      </p>
+      </p> */}
     </footer>
   );
 };

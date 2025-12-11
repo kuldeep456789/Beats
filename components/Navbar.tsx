@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
       <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[90%] max-w-5xl z-50 rounded-full border border-white/10 hover:border-[#00ff88]/30 bg-[#1a1a2e]/80 backdrop-blur-md shadow-2xl shadow-[#00ff88]/10 transition-all duration-300">
         <div className="px-6">
           <div className="flex items-center justify-between h-16">
-            
+
             {/* Logo - Icon removed as requested */}
             <div className="flex-shrink-0 flex items-center gap-2">
               <span className="font-bold text-xl tracking-tight text-white">
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
                     {item.label}
                   </a>
                 ))}
-                <a 
+                <a
                   href={`#${SectionId.CONTACT}`}
                   className="ml-4 bg-gradient-to-r from-[#00ff88] to-[#00d4ff] text-[#0a0a0a] px-5 py-2 rounded-full font-bold hover:shadow-lg hover:shadow-[#00d4ff]/25 transition-all transform hover:scale-105"
                 >
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </a>
               ))}
-              <a 
+              <a
                 href={`#${SectionId.CONTACT}`}
                 onClick={() => setIsOpen(false)}
                 className="block w-full bg-gradient-to-r from-[#00ff88] to-[#00d4ff] text-[#0a0a0a] px-4 py-3 rounded-xl font-bold text-center mt-4 shadow-lg"
