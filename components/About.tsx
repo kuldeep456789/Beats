@@ -29,12 +29,11 @@ const About: React.FC = () => {
           <div className="backdrop-blur-sm bg-black/20 p-8 rounded-3xl border border-white/5">
             <h2 className="text-[#00ff88] font-bold tracking-wider uppercase mb-3 text-sm">Who We Are</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              More Than Just A Party. <br /> We Are A Movement.
+              {/* More Than Just A Party. <br /> We Are A Movement. */}
+              We Are A Movement
             </h3>
             <p className="text-slate-300 text-lg leading-relaxed mb-8">
-              Founded in 2024, UrbanBeat emerged from the desire to reclaim city spaces for creative youth.
-              What started as a small warehouse gathering has exploded into the city's premier event collective.
-              We believe in the power of music and art to unite diverse communities.
+              UrbanBeat emerged from the desire to reclaim city spaces for creative youth.
             </p>
 
             <div className="grid grid-cols-1 gap-8">

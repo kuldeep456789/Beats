@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
         <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
-          Unleash the <br />
+          {/* Unleash the <br /> */}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff88] via-[#00d4ff] to-[#ff0080]">
             Rhythm of the City
           </span>
