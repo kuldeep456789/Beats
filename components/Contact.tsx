@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { SectionId } from '../types';
 import { Mail, Phone, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,16 +29,21 @@ const Contact: React.FC = () => {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error(result.details || result.error || 'Failed to send message');
       }
 
       setFormState('success');
-      e.currentTarget.reset();
+      if (formRef.current) {
+        formRef.current.reset();
+      }
       setTimeout(() => setFormState('idle'), 3000);
     } catch (error) {
       setFormState('error');
-      setErrorMessage('Failed to send message. Please try again.');
+      const message = error instanceof Error ? error.message : 'Failed to send message. Please try again.';
+      setErrorMessage(message);
       setTimeout(() => setFormState('idle'), 3000);
     }
   };
@@ -77,7 +83,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-[#0a0a0a]/40 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
+          <form ref={formRef} onSubmit={handleSubmit} className="bg-[#0a0a0a]/40 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
             <div className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
