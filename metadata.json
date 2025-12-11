@@ -1,0 +1,5 @@
+{
+  "name": "UrbanBeat - Youth Event Collective",
+  "description": "A high-performance, single-page application for UrbanBeat. Features a responsive design, gallery, contact form, and AI-powered content generation using Google Gemini.",
+  "requestFramePermissions": []
+}
